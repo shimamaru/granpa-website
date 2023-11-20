@@ -5,9 +5,9 @@ if ($header_image):?>
 
 	<?php if ( have_posts()) : the_post(); ?>
   <section id="toppage">
-		<header class="header">
+		<!-- <header class="header">
 			<h1 class="title"><span><?php the_title(); ?></span></h1>
-		</header>
+		</header> -->
     <div class="post innerS">
       <?php the_content();?>
     </div>

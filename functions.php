@@ -5,7 +5,10 @@ function my_scripts(){
 }
 add_action( 'wp_enqueue_scripts', 'my_scripts' );
 
+
+
 add_theme_support('menus');
+
 
 
 /*	Load up the theme options
@@ -134,6 +137,13 @@ function kriesi_pagination($pages = '', $range = 2){
          echo "</ul>\n";
      }
 }
-
+function my_scripts_method() {
+	wp_enqueue_script(
+		'custom_script',
+		get_template_directory_uri() . './js/script.js',
+	);
+}
+add_action('wp_enqueue_scripts', 'my_scripts_method');
 
 ?>
+
