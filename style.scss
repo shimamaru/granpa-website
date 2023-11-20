@@ -1,4 +1,6 @@
 @charset "utf-8";
+@import "./variables.scss";
+
 /*
 Theme Name: tpl_090_rwd
 Theme URI: http://f-tpl.com/
@@ -103,7 +105,7 @@ body {
 /* リンク設定
 ------------------------------------------------------------*/
 a {
-  color: #2b86b5;
+  color: $dark-gray;
   text-decoration: none;
 }
 
@@ -126,12 +128,12 @@ input:focus {
 }
 
 .col3 a:hover {
-  color: #2b86b5;
+  color: $dark-gray;
   text-decoration: none;
 }
 
 #wp-calendar a {
-  color: #2b86b5 !important;
+  color: $dark-gray !important;
 }
 
 /* フォーム

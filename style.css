@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "UTF-8";
 /*
 Theme Name: tpl_090_rwd
 Theme URI: http://f-tpl.com/
@@ -18,11 +18,9 @@ Tags: simple
 	http://www.opensource.org/licenses/gpl-license.php
 
 */
-
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
 @import url(https://fonts.googleapis.com/css?family=Modern+Antiqua);
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
-
 /* reset */
 body,
 div,
@@ -50,6 +48,7 @@ td {
   margin: 0;
   padding: 0;
 }
+
 address,
 caption,
 cite,
@@ -61,28 +60,35 @@ th,
 var {
   font-style: normal;
 }
+
 ul {
   list-style: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 caption,
 th {
   text-align: left;
 }
+
 q:before,
 q:after {
   content: "";
 }
+
 object,
 embed {
   vertical-align: top;
 }
+
 legend {
   display: none;
 }
+
 img,
 abbr,
 acronym,
@@ -91,9 +97,7 @@ fieldset {
 }
 
 body {
-  font: 14px/1.9 "Noto Sans JP", Arial, Verdana, 游ゴシック, YuGothic,
-    "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo,
-    sans-serif;
+  font: 14px/1.9 "Noto Sans JP", Arial, Verdana, 游ゴシック, YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, sans-serif;
   font-weight: 300;
   -webkit-text-size-adjust: 100%;
   color: #000;
@@ -103,7 +107,7 @@ body {
 /* リンク設定
 ------------------------------------------------------------*/
 a {
-  color: #2b86b5;
+  color: #333333;
   text-decoration: none;
 }
 
@@ -126,18 +130,18 @@ input:focus {
 }
 
 .col3 a:hover {
-  color: #2b86b5;
+  color: #333333;
   text-decoration: none;
 }
 
 #wp-calendar a {
-  color: #2b86b5 !important;
+  color: #333333 !important;
 }
 
 /* フォーム
 ------------------------------------------------------------*/
-input[type="text"],
-input[type="email"],
+input[type=text],
+input[type=email],
 textarea {
   max-width: 90%;
   height: 28px;
@@ -155,9 +159,9 @@ textarea {
   line-height: 1.5;
 }
 
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
+input[type=submit],
+input[type=reset],
+input[type=button] {
   padding: 1px 10px;
   border: 0;
   border-radius: 3px;
@@ -167,9 +171,9 @@ input[type="button"] {
   background: #000;
 }
 
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover {
+input[type=submit]:hover,
+input[type=reset]:hover,
+input[type=button]:hover {
   cursor: pointer;
   background: #777;
 }
@@ -514,7 +518,6 @@ section header h1 {
 
 /* RESPONSIVE 設定
 ------------------------------------------------------------*/
-
 @media only screen and (min-width: 800px) {
   body {
     font-size: 15px;
@@ -556,13 +559,11 @@ section header h1 {
     padding: 30px 10px 70px 0;
   }
 }
-
 @media only screen and (min-width: 981px) {
   .col3 {
     width: 80%;
     margin: 0 auto;
   }
-
   .col3 > li {
     display: inline-block;
     width: 30%;
@@ -572,7 +573,6 @@ section header h1 {
     text-align: left;
   }
 }
-
 @media only screen and (max-width: 980px) {
   .col3 > li {
     width: 80%;
@@ -593,7 +593,6 @@ section header h1 {
     padding-bottom: 30px;
   }
 }
-
 @media only screen and (max-width: 799px) {
   #header {
     position: fixed;
@@ -622,7 +621,6 @@ section header h1 {
     height: 40px;
     margin: 10px;
   }
-
   #menuBtn {
     display: block;
     position: absolute;
@@ -646,34 +644,27 @@ section header h1 {
     background: #000;
     transition: 0.3s;
   }
-
   #menuBtn:before {
     margin-top: -7px;
   }
-
   #menuBtn:after {
     margin-top: 5px;
   }
-
   a#menu .close {
     background: transparent;
   }
-
   a#menu .close:before,
   a#menu .close:after {
     margin-top: 0;
   }
-
   a#menu .close:before {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
   }
-
   a#menu .close:after {
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
   }
-
   .panel {
     width: 100%;
     display: none;
@@ -697,7 +688,6 @@ section header h1 {
   #mainnav ul ul li {
     padding-left: 20px;
   }
-
   #mainnav li a {
     position: relative;
     display: block;
@@ -723,7 +713,6 @@ section header h1 {
     margin: -4px 0 0 0;
     border-top: solid 2px #000;
     border-right: solid 2px #000;
-    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
   }
   #mainImg {
@@ -749,7 +738,6 @@ section header h1 {
     margin: 10px auto;
   }
 }
-
 /* 新しいcss */
 .header {
   position: fixed;
@@ -758,16 +746,19 @@ section header h1 {
   width: 100%;
   height: 60px;
 }
+
 .header_inner {
   position: relative;
   padding: 15px;
 }
+
 .logo {
   position: absolute;
   top: 0;
   left: 0;
   padding: 10px 15px;
 }
+
 .title {
   font-size: 2rem;
   font-weight: 600;
@@ -895,4 +886,128 @@ section header h1 {
   .nav_list li a {
     font-weight: 600;
   }
-} /*# sourceMappingURL=styles.css.map */
+}
+
+.main {
+  margin-top: 60px;
+}
+
+@media only screen and (max-width: 768px) {
+  .header_inner {
+    margin-top: 100px;
+  }
+  .nav {
+    margin-top: 50px;
+    position: fixed;
+    right: -320px;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    padding-top: 60px;
+    background-color: #fff;
+    transition: all 0.6s;
+    z-index: 200;
+    overflow-y: auto;
+  }
+  .hamburger {
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 300;
+  }
+  .nav_list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .nav_item {
+    text-align: center;
+    padding: 0 14px;
+    color: #333;
+  }
+  .nav_item a {
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: #333;
+  }
+  .nav_item a:hover {
+    background-color: #eee;
+  }
+  .hamburger_border {
+    position: absolute;
+    left: 11px;
+    width: 18px;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.6s;
+  }
+  .hamburger_border_top {
+    top: 14px;
+  }
+  .hamburger_border_center {
+    top: 20px;
+  }
+  .hamburger_border_bottom {
+    top: 26px;
+  }
+  .black_bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s;
+    cursor: pointer;
+  }
+  .nav-open .nav {
+    right: 0;
+  }
+  .nav-open .black_bg {
+    opacity: 0.8;
+    visibility: visible;
+  }
+  .nav-open .hamburger_border_top {
+    transform: rotate(45deg);
+    top: 20px;
+  }
+  .nav-open .hamburger_border_center {
+    width: 0;
+    left: 50%;
+  }
+  .nav-open .hamburger_border_bottom {
+    transform: rotate(-45deg);
+    top: 20px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .header_inner {
+    max-width: 980px;
+    width: 100%;
+    padding: 15px 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .logo {
+    padding: 12px 30px;
+  }
+  .nav_list {
+    text-align: right;
+  }
+  .nav_list li {
+    display: inline-block;
+    text-align: right;
+    padding-left: 20px;
+  }
+  .nav_list li a {
+    font-weight: 600;
+  }
+}/*# sourceMappingURL=style.css.map */
