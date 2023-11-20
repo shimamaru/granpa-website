@@ -144,6 +144,7 @@ function kriesi_pagination($pages = '', $range = 2){
 // add_action('wp_enqueue_scripts', 'my_scripts_method');
 
 
+
 function my_scripts_method() {
   wp_enqueue_script('sample', get_template_directory_uri() . '/js/script.js', array(), '1.0', true);
 }

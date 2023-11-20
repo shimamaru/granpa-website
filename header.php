@@ -27,6 +27,8 @@
       <div class="logo">
         <h1 class="title">LOGO</h1>
       </div>
+
+     
       <nav class="nav">
         <?php
           $args = array(
@@ -35,6 +37,7 @@
           );
           wp_nav_menu($args);
         ?>
+        <span class="nav__list__line"></span>
       </nav>
     </div>
     <div class="hamburger" id="js-hamburger">
