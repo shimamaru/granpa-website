@@ -773,7 +773,6 @@ section header h1 {
   font-weight: 600;
 }
 
-/* header固定のため余白をつける。メニューのCSSには関係ない */
 .main {
   margin-top: 60px;
 }
@@ -785,22 +784,22 @@ section header h1 {
   .nav {
     margin-top: 50px;
     position: fixed;
-    right: -320px; /* 右から出てくる */
+    right: -320px;
     top: 0;
-    width: 300px; /* スマホに収まるサイズ */
+    width: 300px;
     height: 100vh;
     padding-top: 60px;
     background-color: #fff;
     transition: all 0.6s;
     z-index: 200;
-    overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+    overflow-y: auto;
   }
   .hamburger {
     position: absolute;
     right: 15px;
     top: 8px;
-    width: 40px; /* クリックしやすい幅 */
-    height: 40px; /* クリックしやすい高さ */
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     z-index: 300;
   }
@@ -854,8 +853,6 @@ section header h1 {
     transition: all 0.6s;
     cursor: pointer;
   }
-
-  /* 表示された時用のCSS */
   .nav-open .nav {
     right: 0;
   }
@@ -875,8 +872,7 @@ section header h1 {
     transform: rotate(-45deg);
     top: 20px;
   }
-} /* sp */
-
+}
 @media only screen and (min-width: 769px) {
   .header_inner {
     max-width: 980px;
@@ -899,4 +895,4 @@ section header h1 {
   .nav_list li a {
     font-weight: 600;
   }
-} /* pc */
+} /*# sourceMappingURL=styles.css.map */

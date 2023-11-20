@@ -18,12 +18,8 @@
 	<?php endif; ?>
   </header>
 
-
-
-
-			
   <?php get_template_part('module_loop'); ?>
-
+  <?php get_sidebar(); ?>
 	<?php if (function_exists("kriesi_pagination")){
     kriesi_pagination($additional_loop->max_num_pages);
  	}?>
