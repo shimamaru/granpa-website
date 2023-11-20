@@ -18,7 +18,9 @@
   <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>">
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
   <?php wp_head(); ?>
-  <script src="<?php bloginfo('template_url'); ?>/js/script.js"></script>
+  <!-- <script src="<?php bloginfo('template_url'); ?>/js/script.js"></script> -->
+  
+  
 </head>
 <body>
   <header id="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
@@ -30,22 +32,12 @@
     <div class="logo">
     <h1 class="title">LOGO</h1>
     </div>
-    <!-- <nav class="nav">
-      <ul class="nav_list">
-        <li class="nav_item"><a href="#">メニュー1</a></li>
-        <li class="nav_item"><a href="#">メニュー2</a></li>
-        <li class="nav_item"><a href="#">メニュー3</a></li>
-        <li class="nav_item"><a href="#">メニュー4</a></li>
-        <li class="nav_item"><a href="#">メニュー5</a></li>
-      </ul>
-    </nav> -->
     <nav class="nav">
-     <?php
+    <?php
 $args = array(
     'menu_class' => 'nav_list', // ulタグにクラスを追加
       'menu_item_class' => 'nav_item', // liタグにクラスを追加
 );
-
 wp_nav_menu($args);
 ?>
     </nav>
@@ -56,14 +48,6 @@ wp_nav_menu($args);
     <span class="hamburger_border hamburger_border_bottom"></span>
   </div>
   <div class="black_bg" id="js-black-bg"></div>
-
-    <div class="hamburger" id="js-hamburger">
-      <span class="hamburger_border hamburger_border_top"></span>
-      <span class="hamburger_border hamburger_border_center"></span>
-      <span class="hamburger_border hamburger_border_bottom"></span>
-    </div>
-    <div class="black_bg" id="js-black-bg"></div>
-  
     <!-- <div id="headerWrap">
       <p id="logo">
         <?php if (function_exists('the_custom_logo')):?>
