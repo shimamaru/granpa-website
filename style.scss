@@ -181,6 +181,8 @@ input[type="button"] {
 ------------------------------------------------------------*/
 #header {
   text-align: center;
+  // margin: 10px 0;
+  margin-bottom: 10px;
   margin-bottom: 30px;
 
   #logo {
@@ -1175,4 +1177,10 @@ section header h1 {
       }
     }
   }
+}
+
+// sidebarの削除
+
+#sidebar {
+  display: none;
 }

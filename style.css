@@ -181,6 +181,7 @@ input[type=button]:hover {
 ------------------------------------------------------------*/
 #header {
   text-align: center;
+  margin-bottom: 10px;
   margin-bottom: 30px;
 }
 #header #logo {
@@ -1040,4 +1041,7 @@ section header h1 {
   .nav_list li a {
     font-weight: 400;
   }
+}
+#sidebar {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
