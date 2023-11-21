@@ -1034,6 +1034,7 @@ section header h1 {
   .nav_list li {
     display: inline-block;
     text-align: right;
+    padding-left: 50px;
   }
   .nav_list li a {
     font-weight: 400;
