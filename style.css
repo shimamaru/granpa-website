@@ -101,7 +101,7 @@ body {
   font-family: "Shippori Mincho B1", serif;
   font-weight: 300;
   -webkit-text-size-adjust: 100%;
-  color: #000;
+  color: #333333;
   background: #fff;
 }
 
@@ -123,7 +123,6 @@ a input:focus {
 /* アーカイブ + ウィジェット */
 .col3 a {
   display: block;
-  color: #000;
 }
 .col3 a:hover {
   color: #333333;
@@ -511,7 +510,7 @@ section header h1 {
   content: "";
   width: 100%;
   height: 2px;
-  background: #000000;
+  background: #333333;
   bottom: -1px;
   transform: scale(0, 1);
   transform-origin: left top;
@@ -1059,30 +1058,123 @@ section header h1 {
 
 .info {
   width: 90%;
-  margin: 100px auto 0;
-  text-align: center;
+  margin: 100px auto;
 }
-.info .info__header {
+.info .info__inner {
+  text-align: center;
+  width: 40%;
+  margin: 0 auto;
+}
+.info .info__inner .info__header {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 20px;
 }
-.info ul {
-  width: 50%;
-  margin: 0 auto;
+.info .info__inner ul {
   border-top: 1px solid #e0e0e0;
+  margin-bottom: 40px;
 }
-.info ul li {
+.info .info__inner ul li {
   border-bottom: 1px solid #e0e0e0;
 }
-.info ul li a {
+.info .info__inner ul li a {
   padding: 8px 0;
   width: 100%;
   height: 100%;
   display: block;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
-.info ul li a:hover {
-  background-color: #333333;
+.info .info__inner ul li a:hover {
+  background-color: #505050;
   color: #ffffff;
+}
+.info .info__inner .info__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a5a5a5;
+  border: #a5a5a5 solid 1px;
+  padding: 8px;
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.info .info__inner .info__list:hover {
+  background-color: #505050;
+  color: #ffffff;
+}
+.info .info__inner .info__list .info__list__text {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.info .info__inner .info__list .info__list__text .fas {
+  padding-right: 5px;
+  color: #a5a5a5;
+}
+.info .info__inner .info__list .info__list__text .info__list__link {
+  color: #a5a5a5;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+.container .image {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  animation: change-img-anim 30s infinite;
+}
+.container .image .image:nth-of-type(1) {
+  animation: change-img-anim-first 30s infinite;
+  animation-delay: 0s;
+}
+.container .image .image:nth-of-type(2) {
+  animation-delay: 10s;
+}
+.container .image .image:nth-of-type(3) {
+  animation-delay: 20s;
+}
+@keyframes change-img-anim-first {
+  0% {
+    opacity: １;
+  }
+  30% {
+    opacity: 1;
+  }
+  36% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes change-img-anim {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  36% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

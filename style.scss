@@ -99,7 +99,7 @@ body {
   font-family: "Shippori Mincho B1", serif;
   font-weight: 300;
   -webkit-text-size-adjust: 100%;
-  color: #000;
+  color: $dark-gray;
   background: #fff;
 }
 /* リンク設定
@@ -124,7 +124,6 @@ a {
 /* アーカイブ + ウィジェット */
 .col3 a {
   display: block;
-  color: #000;
 
   &:hover {
     color: $dark-gray;
@@ -549,7 +548,7 @@ section header h1 {
       content: "";
       width: 100%;
       height: 2px;
-      background: #000000;
+      background: $dark-gray;
       bottom: -1px;
       transform: scale(0, 1);
       transform-origin: left top;
@@ -1179,7 +1178,6 @@ section header h1 {
 @media only screen and (min-width: 769px) {
   .header_inner {
     max-width: 980px;
-    // width: 100%;
     padding: 15px 30px;
     margin-left: auto;
     margin-right: auto;
@@ -1195,7 +1193,6 @@ section header h1 {
     li {
       display: inline-block;
       text-align: right;
-      // padding-left: 20px;
       padding-left: 50px;
 
       a {
@@ -1213,33 +1210,134 @@ section header h1 {
 
 .info {
   width: 90%;
-  margin: 100px auto 0;
-  text-align: center;
+  margin: 100px auto;
 
-  .info__header {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-  }
-
-  ul {
-    width: 50%;
+  .info__inner {
+    text-align: center;
+    width: 40%;
     margin: 0 auto;
-    border-top: 1px solid $lighter-gray;
-    li {
-      border-bottom: 1px solid $lighter-gray;
+    .info__header {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
 
-      a {
-        padding: 8px 0;
+    ul {
+      border-top: 1px solid $lighter-gray;
+      margin-bottom: 40px;
+
+      li {
+        border-bottom: 1px solid $lighter-gray;
+
+        a {
+          padding: 8px 0;
+          width: 100%;
+          height: 100%;
+          display: block;
+          text-decoration: none;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: $medium-gray;
+            color: $white;
+          }
+        }
+      }
+    }
+    .info__list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $light-gray;
+      border: $light-gray solid 1px;
+      padding: 8px;
+      width: 80%;
+      margin: 0 auto;
+      height: 100%;
+      transition: all 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $medium-gray;
+        color: $white;
+      }
+
+      .info__list__text {
+        display: block;
         width: 100%;
         height: 100%;
-        display: block;
-        text-decoration: none;
 
-        &:hover {
-          background-color: $dark-gray;
-          color: $white;
+        .fas {
+          padding-right: 5px;
+          color: $light-gray;
         }
+
+        .info__list__link {
+          color: $light-gray;
+          display: block;
+          width: 100%;
+          height: 100%;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+// 時間で切り替わる画像のCSS
+.container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  .image {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    animation: change-img-anim 30s infinite;
+
+    .image:nth-of-type(1) {
+      animation: change-img-anim-first 30s infinite;
+      animation-delay: 0s;
+    }
+    .image:nth-of-type(2) {
+      animation-delay: 10s;
+    }
+    .image:nth-of-type(3) {
+      animation-delay: 20s;
+    }
+
+    @keyframes change-img-anim-first {
+      0% {
+        opacity: １;
+      }
+      30% {
+        opacity: 1;
+      }
+      36% {
+        opacity: 1;
+      }
+      45% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    @keyframes change-img-anim {
+      0% {
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      36% {
+        opacity: 1;
+      }
+      45% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
       }
     }
   }
