@@ -111,24 +111,8 @@ a {
   color: #333333;
   text-decoration: none;
 }
-a:hover, a.active {
-  text-decoration: underline;
-}
-a:active, a:focus,
-a input:active,
-a input:focus {
-  outline: 0;
-}
 
 /* アーカイブ + ウィジェット */
-.col3 a {
-  display: block;
-}
-.col3 a:hover {
-  color: #333333;
-  text-decoration: none;
-}
-
 #wp-calendar a {
   color: #333333 !important;
 }
@@ -338,25 +322,6 @@ section header h1 {
 
 /* アーカイブ
 ------------------------------------------------------------*/
-.col3 .thumb {
-  text-align: center;
-  margin-bottom: 15px;
-}
-.col3 .thumb img {
-  width: 100%;
-  height: auto;
-}
-
-.col3 h3 {
-  margin-bottom: 10px;
-  line-height: 1.5;
-}
-
-.date {
-  margin-top: 10px;
-  font-size: 80%;
-}
-
 /* タイポグラフィ
 ------------------------------------------------------------*/
 .post p {
@@ -587,25 +552,7 @@ section header h1 {
     padding: 30px 10px 70px 0;
   }
 }
-@media only screen and (min-width: 981px) {
-  .col3 {
-    width: 80%;
-    margin: 0 auto;
-  }
-  .col3 > li {
-    display: inline-block;
-    width: 30%;
-    padding: 0 1.5%;
-    margin-bottom: 50px;
-    vertical-align: top;
-    text-align: left;
-  }
-}
 @media only screen and (max-width: 980px) {
-  .col3 > li {
-    width: 80%;
-    margin: 0 auto 30px;
-  }
   .header {
     width: 80%;
     margin-bottom: 30px;
@@ -788,6 +735,7 @@ section header h1 {
   .title {
     font-size: 2rem;
     font-weight: 600;
+    text-decoration: none;
   }
   .main {
     margin-top: 60px;
@@ -1065,11 +1013,6 @@ section header h1 {
   width: 40%;
   margin: 0 auto;
 }
-.info .info__inner .info__header {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
 .info .info__inner ul {
   border-top: 1px solid #e0e0e0;
   margin-bottom: 40px;
@@ -1180,5 +1123,43 @@ section header h1 {
   }
   100% {
     opacity: 0;
+  }
+}
+
+.c-header {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.works {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.works .works__header {
+  text-align: center;
+}
+.works .col {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.works .col li {
+  width: calc(33.333% - 10px);
+  margin-bottom: 20px;
+}
+.works .col li a div .thumb img {
+  max-width: 100%;
+  height: auto;
+}
+@media only screen and (max-width: 768px) {
+  .works .col li {
+    width: calc(50% - 10px);
+  }
+}
+@media only screen and (max-width: 480px) {
+  .works .col li {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

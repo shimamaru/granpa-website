@@ -107,29 +107,17 @@ body {
 a {
   color: $dark-gray;
   text-decoration: none;
-
-  &:hover,
-  &.active {
-    text-decoration: underline;
-  }
-
-  &:active,
-  &:focus,
-  input:active,
-  input:focus {
-    outline: 0;
-  }
 }
 
 /* アーカイブ + ウィジェット */
-.col3 a {
-  display: block;
+// .col3 a {
+//   display: block;
 
-  &:hover {
-    color: $dark-gray;
-    text-decoration: none;
-  }
-}
+//   &:hover {
+//     color: $dark-gray;
+//     text-decoration: none;
+//   }
+// }
 
 #wp-calendar a {
   color: $dark-gray !important;
@@ -362,25 +350,25 @@ section header h1 {
 
 /* アーカイブ
 ------------------------------------------------------------*/
-.col3 .thumb {
-  text-align: center;
-  margin-bottom: 15px;
+// .col3 .thumb {
+//   text-align: center;
+//   margin-bottom: 15px;
 
-  img {
-    width: 100%;
-    height: auto;
-  }
-}
+//   img {
+//     width: 100%;
+//     height: auto;
+//   }
+// }
 
-.col3 h3 {
-  margin-bottom: 10px;
-  line-height: 1.5;
-}
+// .col3 h3 {
+//   margin-bottom: 10px;
+//   line-height: 1.5;
+// }
 
-.date {
-  margin-top: 10px;
-  font-size: 80%;
-}
+// .date {
+//   margin-top: 10px;
+//   font-size: 80%;
+// }
 
 /* タイポグラフィ
 ------------------------------------------------------------*/
@@ -638,26 +626,26 @@ section header h1 {
 }
 
 @media only screen and (min-width: 981px) {
-  .col3 {
-    width: 80%;
-    margin: 0 auto;
-  }
+  // .col3 {
+  //   width: 80%;
+  //   margin: 0 auto;
+  // }
 
-  .col3 > li {
-    display: inline-block;
-    width: 30%;
-    padding: 0 1.5%;
-    margin-bottom: 50px;
-    vertical-align: top;
-    text-align: left;
-  }
+  // .col3 > li {
+  //   display: inline-block;
+  //   width: 30%;
+  //   padding: 0 1.5%;
+  //   margin-bottom: 50px;
+  //   vertical-align: top;
+  //   text-align: left;
+  // }
 }
 
 @media only screen and (max-width: 980px) {
-  .col3 > li {
-    width: 80%;
-    margin: 0 auto 30px;
-  }
+  // .col3 > li {
+  //   width: 80%;
+  //   margin: 0 auto 30px;
+  // }
 
   .header {
     width: 80%;
@@ -878,6 +866,7 @@ section header h1 {
   .title {
     font-size: 2rem;
     font-weight: 600;
+    text-decoration: none;
   }
 
   .main {
@@ -1217,11 +1206,11 @@ section header h1 {
     text-align: center;
     width: 40%;
     margin: 0 auto;
-    .info__header {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
+    // .info__header {
+    //   font-size: 1.5rem;
+    //   font-weight: 600;
+    //   margin-bottom: 20px;
+    // }
 
     ul {
       border-top: 1px solid $lighter-gray;
@@ -1349,6 +1338,58 @@ section header h1 {
     }
     100% {
       opacity: 0;
+    }
+  }
+}
+
+//コンポーネント(component)
+.c-header {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+// 一覧
+
+.works {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  .works__header {
+    text-align: center;
+  }
+
+  .col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; // Adjust as needed
+
+    li {
+      width: calc(33.333% - 10px); // Adjust margin as needed
+      margin-bottom: 20px; // Adjust as needed
+
+      a {
+        div {
+          .thumb {
+            img {
+              max-width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      li {
+        width: calc(50% - 10px); // Adjust margin as needed for smaller screens
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      li {
+        width: 100%; // Full width on smaller screens
+      }
     }
   }
 }

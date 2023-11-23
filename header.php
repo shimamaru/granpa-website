@@ -24,13 +24,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-******************" crossorigin="anonymous" />
 
-  <?php wp_head(); ?>
+<?php wp_head(); ?>
 </head>
 <body>
   <header id="header" itemscope="itemscope">
     <div class="header_inner">
       <div class="logo">
-        <h1 class="title">LOGO</h1>
+        <h1 class="title">
+        <a href="#">LOGO</a>  
+        </h1>
       </div>
       <nav class="nav">
         <?php

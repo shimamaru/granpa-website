@@ -17,7 +17,7 @@ if ($header_image): ?>
 <?php if (have_posts()) : the_post(); ?>
    <section class="info">
     <div class="info__inner">
-        <h2 class="info__header">お知らせ・イベント</h2>
+        <h2 class="c-header">お知らせ・イベント</h2>
         <?php
         // カテゴリーのID
         $category_id = 4;
