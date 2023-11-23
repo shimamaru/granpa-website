@@ -8,7 +8,9 @@
 
 
 <footer id="footer">
-  <div>made by : Yu Shimatani</div>
+  <p>made by : Yu Shimatani</p>
+  <p>© Koukichi Shimatani. All rights reserved.
+</p>
 </footer>
 
 <?php wp_footer(); ?>
