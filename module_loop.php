@@ -5,7 +5,7 @@
     		<a href="<?php the_permalink() ?>">
       		<div>
     				<?php if(has_post_thumbnail()):?>
-							<p class="thumb"><?php echo get_the_post_thumbnail($post->ID, 'size1');?></p>
+							<p class="thumb"><?php echo get_the_post_thumbnail($post->ID, 'full');?></p>
 							<?php endif;?>
         		<h3><span><?php the_title(); ?></span></h3>
         		<?php the_excerpt();?>

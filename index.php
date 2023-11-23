@@ -17,7 +17,6 @@
 	<h1 class="title"><span>Blog Archives</span></h1>
 	<?php endif; ?>
   </header>
-
   <?php get_template_part('module_loop'); ?>
   <?php get_sidebar(); ?>
 	<!-- <?php if (function_exists("kriesi_pagination")){
