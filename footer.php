@@ -8,6 +8,7 @@
 
 
 <footer id="footer">
+  <div>made by : Yu Shimatani</div>
 </footer>
 
 <?php wp_footer(); ?>

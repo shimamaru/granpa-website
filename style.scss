@@ -1203,6 +1203,13 @@ section header h1 {
   max-width: 780px;
   margin: 100px auto;
 
+  @media only screen and (max-width: 992px) {
+    margin: 50px auto;
+  }
+
+  @media only screen and (max-width: 480px) {
+  }
+
   .info__inner {
     text-align: center;
     max-width: 580px;
@@ -1274,9 +1281,17 @@ section header h1 {
 .kv {
   .container {
     position: relative;
-    max-height: 700px;
+    // max-height: 700px;
     height: 700px;
     width: 100%;
+
+    @media only screen and (max-width: 992px) {
+      height: 400px;
+    }
+
+    @media only screen and (max-width: 480px) {
+      height: 300px;
+    }
   }
 
   .image {

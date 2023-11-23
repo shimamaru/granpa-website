@@ -1009,6 +1009,11 @@ section header h1 {
   max-width: 780px;
   margin: 100px auto;
 }
+@media only screen and (max-width: 992px) {
+  .info {
+    margin: 50px auto;
+  }
+}
 .info .info__inner {
   text-align: center;
   max-width: 580px;
@@ -1069,9 +1074,18 @@ section header h1 {
 
 .kv .container {
   position: relative;
-  max-height: 700px;
   height: 700px;
   width: 100%;
+}
+@media only screen and (max-width: 992px) {
+  .kv .container {
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .kv .container {
+    height: 300px;
+  }
 }
 .kv .image {
   position: absolute;

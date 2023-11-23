@@ -50,6 +50,11 @@
       <span class="hamburger_border hamburger_border_bottom"></span>
     </div>
     <div class="black_bg" id="js-black-bg"></div>
+
+    
   </header>
+
+  <script src="/js/vivus.js" type="text/javascript"></script>
+<script src="/js/pathformer.js" type="text/javascript"></script>
 </body>
 </html>
