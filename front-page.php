@@ -4,11 +4,13 @@ if ($header_image): ?>
     <!-- <div id="mainImg">
         <img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="<?php bloginfo('description'); ?>">
     </div> -->
+<div class="kv">
   <div class="container">
-   <img class="image" src="<?php echo get_template_directory_uri(); ?>/images/syoku-01.jpg" alt="職人1">
-   <img class="image" src="<?php echo get_template_directory_uri(); ?>/images/syoku-02.jpg" alt="職人2">
-   <img class="image" src="<?php echo get_template_directory_uri(); ?>/images/syoku-03.jpg" alt="職人3">
+    <img class="image" src="<?php echo get_template_directory_uri(); ?>/images/syoku-01.jpg" alt="職人1">
+    <img class="image" src="<?php echo get_template_directory_uri(); ?>/images/syoku-02.jpeg" alt="職人1">
+    <img class="image" src="<?php echo get_template_directory_uri(); ?>/images/syoku-03.jpeg" alt="職人1">
   </div>
+</div>
 </div>
 <?php endif; ?>
 
