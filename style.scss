@@ -96,6 +96,7 @@ body {
   font: 14px/1.9 "Noto Sans JP", Arial, Verdana, 游ゴシック, YuGothic,
     "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo,
     sans-serif;
+  font-family: "Shippori Mincho B1", serif;
   font-weight: 300;
   -webkit-text-size-adjust: 100%;
   color: #000;
@@ -133,6 +134,27 @@ a {
 
 #wp-calendar a {
   color: $dark-gray !important;
+}
+
+//
+
+.blackToWhite-css-selector {
+  background: linear-gradient(273deg, #000000, #ffffff);
+  background-size: 400% 400%;
+
+  animation: AnimationName 53s ease infinite;
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
 }
 
 /* フォーム
@@ -271,10 +293,6 @@ input[type="button"] {
 
 /* 共通
 ------------------------------------------------------------*/
-h1,
-h2 {
-  font-family: "Noto Sans JP", serif;
-}
 
 h3 {
   font-size: 120%;
@@ -645,10 +663,6 @@ section header h1 {
   .header {
     width: 80%;
     margin-bottom: 30px;
-
-    .header_inner {
-      // margin-top: 100px;
-    }
 
     .logo {
       padding-top: 10px;
@@ -1023,10 +1037,6 @@ section header h1 {
 }
 
 @media only screen and (max-width: 768px) {
-  .header_inner {
-    // margin-top: 100px;
-  }
-
   .nav {
     // margin-top: 50px;
     position: fixed;
@@ -1199,4 +1209,38 @@ section header h1 {
 
 #sidebar {
   display: none;
+}
+
+.info {
+  width: 90%;
+  margin: 100px auto 0;
+  text-align: center;
+
+  .info__header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    width: 50%;
+    margin: 0 auto;
+    border-top: 1px solid $lighter-gray;
+    li {
+      border-bottom: 1px solid $lighter-gray;
+
+      a {
+        padding: 8px 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        text-decoration: none;
+
+        &:hover {
+          background-color: $dark-gray;
+          color: $white;
+        }
+      }
+    }
+  }
 }

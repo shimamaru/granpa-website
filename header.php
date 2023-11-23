@@ -19,6 +19,9 @@
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>">
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600&display=swap" rel="stylesheet">
   <?php wp_head(); ?>
 </head>
 <body>

@@ -7,37 +7,39 @@ if ($header_image): ?>
 <?php endif; ?>
 
 <?php if (have_posts()) : the_post(); ?>
-    <section>
-        <h2>お知らせ・イベント</h2>
-        <?php
-        // カテゴリーのID
-        $category_id = 4;
+   <section class="info">
+    <h2 class="info__header">お知らせ・イベント</h2>
+    <?php
+    // カテゴリーのID
+    $category_id = 4;
 
-        // WP_Queryで指定したカテゴリーの記事を取得
-        $args = array(
-            'cat' => $category_id,
-            'posts_per_page' => -1, // すべての記事を取得する場合は-1を指定
-        );
-        $query = new WP_Query($args);
+    // WP_Queryで指定したカテゴリーの記事を最大5つ取得
+    $args = array(
+        'cat' => $category_id,
+        'posts_per_page' => 5, // 最大5つの記事を取得
+    );
+    $query = new WP_Query($args);
 
-        // クエリが記事を持っているか確認
-        if ($query->have_posts()) :
-            echo '<ul>'; // リストの開始
+    // クエリが記事を持っているか確認
+    if ($query->have_posts()) :
+        echo '<ul>'; // リストの開始
 
-            while ($query->have_posts()) : $query->the_post();
-                echo '<li>';
-                the_title(); // 記事のタイトルを表示
-                echo '</li>';
-            endwhile;
+        while ($query->have_posts()) : $query->the_post();
+            echo '<li>';
+            // タイトルにリンクを設定
+            echo '<a href="' . esc_url(get_permalink()) . '">' . get_the_title() . '</a>';
+            echo '</li>';
+        endwhile;
 
-            echo '</ul>'; // リストの終了
+        echo '</ul>'; // リストの終了
 
-            wp_reset_postdata(); // ループ後に元の投稿データを復元
-        else :
-            echo '該当する記事はありません。';
-        endif;
-        ?>
-    </section>
+        wp_reset_postdata(); // ループ後に元の投稿データを復元
+    else :
+        echo '該当する記事はありません。';
+    endif;
+    ?>
+</section>
+
 <?php endif; ?>
 
 <?php query_posts('post_type=post'); ?>
