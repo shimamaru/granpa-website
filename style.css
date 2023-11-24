@@ -1199,4 +1199,11 @@ section header h1 {
     left: 0;
     padding-left: 10px;
   }
+}
+
+.topPage-works img,
+.worksList-page img {
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */

@@ -20,7 +20,7 @@ if ($header_image): ?>
         <h2 class="c-header">お知らせ・イベント</h2>
         <?php
         // カテゴリーのID
-        $category_id = 4;
+        $category_id = 3;
     
         // WP_Queryで指定したカテゴリーの記事を最大5つ取得
         $args = array(
@@ -66,7 +66,7 @@ if ($header_image): ?>
 
 <?php
 // カテゴリーのID
-$category_id = 3;
+$category_id = 5;
 
 // WP_Queryで指定したカテゴリーの記事を最大5つ取得
 $args = array(
@@ -78,6 +78,7 @@ $query = new WP_Query($args);
 // クエリが記事を持っているか確認
 if ($query->have_posts()) :
 ?>
+<div class="topPage-works">
   <section class="works">
     <h2 class="c-header works__header">作品</h2>
     <ul class="col">
@@ -98,6 +99,7 @@ if ($query->have_posts()) :
       ?>
     </ul>
   </section>
+  </div>
 <?php
   wp_reset_postdata(); // ループ後に元の投稿データを復元
 else :
