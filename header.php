@@ -27,6 +27,8 @@
 <?php wp_head(); ?>
 </head>
 <body>
+
+
   <header id="header" itemscope="itemscope">
     <div class="header_inner">
       <div class="logo">

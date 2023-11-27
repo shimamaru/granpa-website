@@ -4,6 +4,9 @@ if ($header_image): ?>
     <!-- <div id="mainImg">
         <img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="<?php bloginfo('description'); ?>">
     </div> -->
+<div id="loading">
+    <div class="loader"></div>
+</div>
 <div class="kv">
   <div class="container">
     <img class="image" src="<?php echo get_template_directory_uri(); ?>/images/syoku-01.jpg" alt="職人1">
@@ -11,6 +14,46 @@ if ($header_image): ?>
     <img class="image" src="<?php echo get_template_directory_uri(); ?>/images/syoku-03.jpeg" alt="職人1">
   </div>
 </div>
+<?php
+// カテゴリーID
+$category_id = 6;
+
+// カスタムクエリの設定
+$args = array(
+  'post_type' => 'post', // 投稿タイプを指定
+  'cat' => $category_id, // カテゴリーIDを指定
+  'posts_per_page' => -1, // すべての投稿を取得
+);
+
+$query = new WP_Query($args);
+
+// クエリが記事を持っているか確認
+if ($query->have_posts()) :
+?>
+  <div class="topPage-works">
+    <section class="works">
+        <?php
+        while ($query->have_posts()) : $query->the_post();
+        ?>
+          <li>
+                <?php if (has_post_thumbnail()) : ?>
+                  <p class="image"><?php echo get_the_post_thumbnail($post->ID, 'full'); ?></p>
+                <?php endif; ?>
+          </li>
+        <?php
+        endwhile;
+        ?>
+    </section>
+  </div>
+  <?php
+  wp_reset_postdata(); // ループ後に元の投稿データを復元
+else :
+  echo '該当する記事はありません。';
+endif;
+?>
+
+
+
 </div>
 <?php endif; ?>
 
@@ -99,6 +142,7 @@ if ($query->have_posts()) :
       ?>
     </ul>
   </section>
+
   </div>
 <?php
   wp_reset_postdata(); // ループ後に元の投稿データを復元
