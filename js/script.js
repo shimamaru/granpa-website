@@ -13,6 +13,7 @@ function toggleNav() {
   });
 }
 toggleNav();
+
 window.onload = function () {
   // 2秒後にローディングアニメーションを非表示にする
   setTimeout(function () {

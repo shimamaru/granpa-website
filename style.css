@@ -1091,6 +1091,21 @@ section header h1 {
 .kv .image:nth-of-type(3) {
   animation-delay: 20s;
 }
+.kv .image:nth-of-type(4) {
+  animation-delay: 30s;
+}
+.kv .image:nth-of-type(5) {
+  animation-delay: 40s;
+}
+.kv .image:nth-of-type(6) {
+  animation-delay: 50s;
+}
+.kv .image:nth-of-type(7) {
+  animation-delay: 60s;
+}
+.kv .image:nth-of-type(8) {
+  animation-delay: 70s;
+}
 @keyframes change-img-anim-first {
   0% {
     opacity: 1;
@@ -1221,7 +1236,6 @@ section header h1 {
   top: 0;
   left: 0;
   z-index: 9999;
-  /* 中のローディングアニメ */
 }
 #loading.loaded {
   opacity: 0;
@@ -1230,39 +1244,39 @@ section header h1 {
 #loading .loader,
 #loading .loader:before,
 #loading .loader:after {
-  background: #ffffff;
-  animation: loading 1s infinite ease-in-out;
-  width: 1em;
-  height: 4em;
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  animation-fill-mode: both;
+  animation: load7 1.8s infinite ease-in-out;
 }
 #loading .loader {
   color: #ffffff;
-  text-indent: -9999em;
-  margin: 88px auto;
+  font-size: 10px;
+  margin: 80px auto;
   position: relative;
-  font-size: 11px;
+  text-indent: -9999em;
   transform: translateZ(0);
   animation-delay: -0.16s;
 }
-#loading .loader::before, #loading .loader::after {
+#loading .loader:before,
+#loading .loader:after {
+  content: "";
   position: absolute;
   top: 0;
-  content: "";
 }
-#loading .loader::before {
-  left: -1.5em;
+#loading .loader:before {
+  left: -3.5em;
   animation-delay: -0.32s;
 }
-#loading .loader::after {
-  left: 1.5em;
+#loading .loader:after {
+  left: 3.5em;
 }
-@keyframes loading {
+@keyframes load7 {
   0%, 80%, 100% {
-    box-shadow: 0 0;
-    height: 4em;
+    box-shadow: 0 2.5em 0 -1.3em;
   }
   40% {
-    box-shadow: 0 -2em;
-    height: 5em;
+    box-shadow: 0 2.5em 0 0;
   }
 }/*# sourceMappingURL=style.css.map */

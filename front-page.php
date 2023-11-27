@@ -7,13 +7,17 @@ if ($header_image): ?>
 <div id="loading">
     <div class="loader"></div>
 </div>
-<div class="kv">
+<!-- <div class="kv">
   <div class="container">
     <img class="image" src="<?php echo get_template_directory_uri(); ?>/images/syoku-01.jpg" alt="職人1">
     <img class="image" src="<?php echo get_template_directory_uri(); ?>/images/syoku-02.jpeg" alt="職人1">
     <img class="image" src="<?php echo get_template_directory_uri(); ?>/images/syoku-03.jpeg" alt="職人1">
   </div>
-</div>
+</div> -->
+
+
+         <div class="kv">
+  <div class="container">
 <?php
 // カテゴリーID
 $category_id = 6;
@@ -30,27 +34,28 @@ $query = new WP_Query($args);
 // クエリが記事を持っているか確認
 if ($query->have_posts()) :
 ?>
-  <div class="topPage-works">
-    <section class="works">
         <?php
         while ($query->have_posts()) : $query->the_post();
         ?>
-          <li>
-                <?php if (has_post_thumbnail()) : ?>
-                  <p class="image"><?php echo get_the_post_thumbnail($post->ID, 'full'); ?></p>
-                <?php endif; ?>
-          </li>
+
+ 
+<?php if (has_post_thumbnail()) : ?>
+              <?php echo get_the_post_thumbnail($post->ID, 'full', array('class' => 'image')); ?>
+            <?php endif; ?>
+ 
+            
         <?php
         endwhile;
         ?>
-    </section>
-  </div>
   <?php
   wp_reset_postdata(); // ループ後に元の投稿データを復元
 else :
   echo '該当する記事はありません。';
 endif;
 ?>
+
+ </div>
+</div>
 
 
 
@@ -142,7 +147,6 @@ if ($query->have_posts()) :
       ?>
     </ul>
   </section>
-
   </div>
 <?php
   wp_reset_postdata(); // ループ後に元の投稿データを復元
